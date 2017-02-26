@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 html {
   height: 100%;
 }

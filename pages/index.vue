@@ -8,9 +8,8 @@
 </template>
 
 <style lang="scss">
-  .home {
-
-  }
+.home {
+}
 </style>
 
 <script>

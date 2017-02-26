@@ -9,5 +9,6 @@
     background: #fff;
     font-size: .8em;
     padding: 4em 1em;
+    text-transform: uppercase;
   }
 </style>

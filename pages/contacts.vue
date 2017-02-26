@@ -8,13 +8,18 @@
 </template>
 
 <style lang="scss">
-  .contacts {
-    padding-top: 10em;
-
-    a {
-      padding: 1em 2em;
+@import '../node_modules/coriolan-ui/tools/variables';
+@import '../node_modules/coriolan-ui/mixins/media';
+.contacts {
+  padding-top: 10em;
+  a {
+    padding: 1em 2em;
+    display: block;
+    @include media(M) {
+      display: inline-block;
     }
   }
+}
 </style>
 
 <script>
