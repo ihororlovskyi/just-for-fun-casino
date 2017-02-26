@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "coriolan-ui": "^0.1.19",
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "start": "nuxt"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2"
+  }
+}
