@@ -13,7 +13,13 @@
 </style>
 
 <script>
-  export default {
-    layout: 'default'
+export default {
+  layout: 'default',
+  head: {
+    title: 'Home',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Home page description' }
+    ]
   }
+}
 </script>

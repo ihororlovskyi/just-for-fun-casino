@@ -23,7 +23,13 @@
 </style>
 
 <script>
-  export default {
-    layout: 'default'
+export default {
+  layout: 'default',
+  head: {
+    title: 'Contacts',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Home page description' }
+    ]
   }
+}
 </script>
