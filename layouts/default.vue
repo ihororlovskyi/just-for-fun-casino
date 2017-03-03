@@ -14,9 +14,9 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic');
+@import '../node_modules/normalize.css/normalize.css';
 
 body {
-  margin: 0;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   background-color: rgba(#000,.05);;
