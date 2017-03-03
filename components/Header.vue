@@ -2,7 +2,6 @@
   <header>
     <nuxt-link to='/' exact>Mess division</nuxt-link>
     <nuxt-link to='/contacts'>Contacts</nuxt-link>
-    <a href='https://www.facebook.com/messdivision/' target='_blank'>facebook</a>
   </header>
 </template>
 
