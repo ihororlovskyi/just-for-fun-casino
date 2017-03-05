@@ -9,18 +9,18 @@
 </template>
 
 <style lang="scss">
-  .footer {
-    background: #fff;
-    font-size: .8em;
-    padding: 4em 1em;
+.footer {
+  background: #fff;
+  font-size: .8em;
+  padding: 4em 1em;
 
-    &__soclink {
-      text-transform: uppercase;
-    }
-
-    &__copyright {
-      margin-top: 1em;
-      text-transform: uppercase;
-    }
+  &__soclink {
+    text-transform: uppercase;
   }
+
+  &__copyright {
+    margin-top: 1em;
+    text-transform: uppercase;
+  }
+}
 </style>

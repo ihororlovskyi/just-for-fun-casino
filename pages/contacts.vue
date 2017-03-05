@@ -10,11 +10,14 @@
 <style lang="scss">
 @import '../node_modules/coriolan-ui/tools/variables';
 @import '../node_modules/coriolan-ui/mixins/media';
+
 .contacts {
   padding-top: 10em;
+
   a {
     padding: 1em 2em;
     display: block;
+
     @include media(M) {
       display: inline-block;
     }
@@ -28,7 +31,8 @@ export default {
   head: {
     title: 'Contacts',
     meta: [
-      { hid: 'description', name: 'description', content: 'Home page description' }
+      { name: 'description', content: 'Contacts page description' },
+      { property: 'og:image', content: 'Contacts page og-image' }
     ]
   }
 }

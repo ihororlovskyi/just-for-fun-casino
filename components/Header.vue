@@ -6,19 +6,34 @@
 </template>
 
 <style lang="scss">
-  header {
-    background: #fff;
+@import '../node_modules/coriolan-ui/tools/variables';
+@import '../node_modules/coriolan-ui/mixins/media';
 
-    a {
-      font-weight: 600;
-      color: #000;
-      text-transform: uppercase;
-      padding: 1em 2em;
-      display: inline-block;
+header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      &.nuxt-link-active {
-        background-color: rgba(#000,.05);
-      }
+  a {
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    padding: 0 1em;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+    @include media(M) {
+      flex-basis: auto;
+      padding: 0 2em;
+    }
+
+    &.nuxt-link-active {
+      background-color: rgba(#000,.05);
     }
   }
+}
 </style>
