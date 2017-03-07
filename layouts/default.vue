@@ -2,11 +2,11 @@
   <div class="flex-sticky">
 
     <div class="flex-sticky__content">
-      <Header/>
+      <HeaderAlpha/>
       <nuxt/>
     </div>
     <div class="flex-sticky__footer">
-      <Footer/>
+      <FooterAlpha/>
     </div>
 
   </div>
@@ -57,13 +57,13 @@ body {
 </style>
 
 <script>
-import Header from '~components/Header.vue'
-import Footer from '~components/Footer.vue'
+import HeaderAlpha from '~components/HeaderAlpha.vue'
+import FooterAlpha from '~components/FooterAlpha.vue'
 
 export default {
   components: {
-    Header,
-    Footer
+    HeaderAlpha,
+    FooterAlpha
   }
 }
 </script>

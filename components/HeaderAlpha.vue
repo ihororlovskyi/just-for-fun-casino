@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <nuxt-link to='/' exact>Mess division</nuxt-link>
-    <nuxt-link to='/contacts'>Contacts</nuxt-link>
+  <header class="header-alpha">
+    <nuxt-link class="header-alpha__link" to='/' exact>Mess division</nuxt-link>
+    <nuxt-link class="header-alpha__link" to='/contacts'>Contacts</nuxt-link>
   </header>
 </template>
 
@@ -9,13 +9,13 @@
 @import '../node_modules/coriolan-ui/tools/variables';
 @import '../node_modules/coriolan-ui/mixins/media';
 
-header {
+.header-alpha {
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  a {
+  &__link {
     font-weight: 600;
     color: #000;
     text-transform: uppercase;

@@ -7,9 +7,12 @@
 
 <style lang="scss">
 .home {
+
   img {
     width: 100%;
-    max-width: 333px;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
   }
 }
 </style>
