@@ -1,9 +1,10 @@
 <template>
   <div class="contacts">
-    <p>
-      <a href="mailto:olgaklapak@gmail.com?subject=Hello, Olga">olgaklapak@gmail.com</a>
-      <a href="mailto:jujumony@gmail.com?subject=Hello, Julia">jujumony@gmail.com</a>
-    </p>
+    <p>Send message to us via <a class="footer-alpha__soclink" href='https://www.facebook.com/messdivision' target='_blank'>facebook</a></p>
+    <!-- <p>
+      <a class="contacts__link" href="mailto:olgaklapak@gmail.com?subject=Hello, Olga">olgaklapak@gmail.com</a>
+      <a class="contacts__link" href="mailto:jujumony@gmail.com?subject=Hello, Julia">jujumony@gmail.com</a>
+    </p> -->
   </div>
 </template>
 
@@ -14,7 +15,7 @@
 .contacts {
   padding-top: 10em;
 
-  a {
+  &__link {
     padding: 1em 2em;
     display: block;
 
