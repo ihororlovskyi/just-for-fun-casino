@@ -19,7 +19,8 @@
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  background-color: rgba(#000,.05);;
+  background-color: rgba(#000,.05);
+  margin: 0;
 }
 
 a {
