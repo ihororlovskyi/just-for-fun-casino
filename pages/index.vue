@@ -5,18 +5,6 @@
   </div>
 </template>
 
-<style lang="scss">
-.home {
-
-  img {
-    width: 100%;
-    max-width: 380px;
-    display: block;
-    margin: 0 auto;
-  }
-}
-</style>
-
 <script>
 export default {
   layout: 'default',
@@ -29,3 +17,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+
+  img {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>

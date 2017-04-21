@@ -1,6 +1,8 @@
 <template>
   <header class="header-alpha">
     <nuxt-link class="header-alpha__link" to='/' exact>Mess division</nuxt-link>
+    <nuxt-link class="header-alpha__link" to='/clothes'>Сlothes</nuxt-link>
+    <nuxt-link class="header-alpha__link" to='/soap'>Soap</nuxt-link>
     <nuxt-link class="header-alpha__link" to='/contacts'>Contacts</nuxt-link>
   </header>
 </template>

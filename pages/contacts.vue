@@ -8,6 +8,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  layout: 'default',
+  head: {
+    title: 'Contacts',
+    meta: [
+      { name: 'description', content: 'Contacts page description' },
+      { property: 'og:image', content: 'Contacts page og-image' }
+    ]
+  }
+}
+</script>
+
 <style lang="scss">
 @import '../node_modules/coriolan-ui/tools/variables';
 @import '../node_modules/coriolan-ui/mixins/media';
@@ -25,16 +38,3 @@
   }
 }
 </style>
-
-<script>
-export default {
-  layout: 'default',
-  head: {
-    title: 'Contacts',
-    meta: [
-      { name: 'description', content: 'Contacts page description' },
-      { property: 'og:image', content: 'Contacts page og-image' }
-    ]
-  }
-}
-</script>
