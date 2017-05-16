@@ -14,6 +14,6 @@ _Web development of Mess Division site_
 
 `npm i`
 
-`npm start`
+`nuxt` or `npm run develop`
 
 #### Have fun! :)
