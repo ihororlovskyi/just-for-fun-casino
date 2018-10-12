@@ -1,12 +1,16 @@
-# messdivision
+# just-for-fun-casino
 
-_Web development of Mess Division site_
+_Web development of Just For Fun Casino site_
 
 ### Used
 
-[Nuxt.js](https://nuxtjs.org) - framework for server-rendered [Vue.js](https://vuejs.org) applications
+[VueJS](https://vuejs.org) - progressive javascript framework
 
-[Coriolan UI](https://coriolan-ui.github.io) - [Sass](http://sass-lang.com) mixins pack
+[NuxtJS](https://nuxtjs.org) - framework for server-rendered VueJS applications
+
+[VuetifyJS](https://vuetifyjs.com) - material component framework for VueJS
+
+[Firebase](https://firebase.google.com) - realtime database by Google Developers
 
 [Netlify](https://www.netlify.com) - automatic deploy & free hosting platform
 
@@ -14,6 +18,6 @@ _Web development of Mess Division site_
 
 `npm i`
 
-`nuxt` or `npm run develop`
+`npm run dev`
 
 #### Have fun! :)

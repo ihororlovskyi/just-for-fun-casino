@@ -1,14 +1,19 @@
 {
   "dependencies": {
-    "coriolan-ui": "^0.1.19",
-    "normalize.css": "^7.0.0",
-    "nuxt": "^0.10.7"
+    "firebase": "5.5.4",
+    "nuxt": "^1.4.2",
+    "vuetify": "^1.2.9"
   },
   "devDependencies": {
-    "node-sass": "^4.5.2",
-    "sass-loader": "^6.0.5"
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
   },
   "scripts": {
-    "develop": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt generate"
+  },
+  "engines": {
+    "node": ">=9.5",
+    "npm": ">=5.6"
   }
 }
