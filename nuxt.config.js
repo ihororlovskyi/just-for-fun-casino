@@ -18,7 +18,7 @@ module.exports = {
     color: 'rgba(0,0,0,0.5)',
     height: '5px'
   },
-  // mode: 'spa',
+  mode: 'spa',
   plugins: [
     { src: '~plugins/google-analytics.js', ssr: false },
     { src: '~/plugins/vuetify.js', ssr: false },

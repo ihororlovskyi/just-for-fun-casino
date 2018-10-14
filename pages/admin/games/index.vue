@@ -49,12 +49,12 @@
         return this.$store.getters.loading
       },
       games () {
-        return this.$store.getters.loadedGames
+        return this.$store.getters.loadedGamesSortedByDate
       }
     },
     methods: {
       onLoadGame (id) {
-        this.$router.push('/admin/games/' + id)
+        this.$router.push('/admin/games/edit/' + id)
       },
       // onEditPage (id) {
       //   this.$router.push('/admin/games/edit/' + id)

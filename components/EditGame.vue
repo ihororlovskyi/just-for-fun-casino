@@ -45,6 +45,12 @@
           label="Iframe Url"
           v-model="editedIframeUrl"
         />
+        <v-text-field
+          name="image"
+          id="image"
+          label="image"
+          v-model="editedimage"
+        />
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -65,7 +71,8 @@
         editedTitle: this.game.title,
         editedSlug: this.game.slug,
         editedImageUrl: this.game.imageUrl,
-        editedIframeUrl: this.game.iframeUrl
+        editedIframeUrl: this.game.iframeUrl,
+        editedimage: this.game.image
       }
     },
     methods: {
@@ -75,7 +82,8 @@
           title: this.editedTitle,
           slug: this.editedSlug,
           imageUrl: this.imageUrl,
-          iframeUrl: this.iframeUrl
+          iframeUrl: this.iframeUrl,
+          image: this.image
         }
         this.$store.dispatch('updateGameData', gameData)
         this.editGameDialog = false

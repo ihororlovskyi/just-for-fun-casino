@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import firebase, {auth, GoogleProvider, DB} from '@/services/fireinit.js'
+// import firebase, {auth, GoogleProvider, DB} from '@/services/fireinit.js'
 // import * as firebase from 'firebase'
 
 import games from './games'

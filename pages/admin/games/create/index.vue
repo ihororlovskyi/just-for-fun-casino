@@ -8,7 +8,7 @@
           label="Title"
           id="title"
           v-model="title"
-          type="title"
+          type="text"
           autocomplete="title"
           required
         />
@@ -17,27 +17,32 @@
           label="Slug"
           id="slug"
           v-model="slug"
-          type="slug"
+          type="text"
           autocomplete="slug"
-          required
         />
         <v-text-field
           name="imageUrl"
           label="Image Url"
           id="imageUrl"
           v-model="imageUrl"
-          type="imageUrl"
+          type="text"
           autocomplete="imageUrl"
-          required
         />
         <v-text-field
           name="iframeUrl"
           label="Iframe Url"
           id="iframeUrl"
           v-model="iframeUrl"
-          type="iframeUrl"
+          type="text"
           autocomplete="iframeUrl"
-          required
+        />
+        <v-text-field
+          name="image"
+          label="image"
+          id="image"
+          v-model="image"
+          type="text"
+          autocomplete="image"
         />
       </v-card-text>
       <v-card-actions>
@@ -64,12 +69,13 @@
         title: '',
         slug: '',
         imageUrl: '',
-        iframeUrl: ''
+        iframeUrl: '',
+        image: ''
       }
     },
     computed: {
       formIsValid () {
-        return this.title !== '' && this.slug !== '' && this.imageUrl !== '' && this.iframeUrl !== ''
+        return this.title !== ''
       }
     },
     methods: {
@@ -82,7 +88,8 @@
           title: this.title,
           slug: this.slug,
           imageUrl: this.imageUrl,
-          iframeUrl:  this.iframeUrl
+          iframeUrl:  this.iframeUrl,
+          image:  this.image
         }
         this.$store.dispatch('createGame', gameData)
         this.$router.push('/admin/games')

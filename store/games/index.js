@@ -1,5 +1,4 @@
 import firebase, {DB} from '@/services/fireinit.js'
-// import * as firebase from 'firebase'
 
 export default {
 
@@ -14,14 +13,6 @@ export default {
     createGame (state, payload) {
       state.loadedGames.push(payload)
     },
-    removeGame (state, payload) {
-      const index = state.loadedGames.findIndex(game => {
-        return game.id === payload
-      })
-      if (index !== -1) {
-        state.loadedGames.splice(index, 1)
-      }
-    },
     updateGameData (state, payload) {
       const game = state.loadedGames.find(game => {
         return game.id === payload.id
@@ -30,6 +21,15 @@ export default {
       game.slug = payload.slug
       game.imageUrl = payload.imageUrl
       game.iframeUrl = payload.iframeUrl
+      game.image = payload.image
+    },
+    removeGame (state, payload) {
+      const index = state.loadedGames.findIndex(game => {
+        return game.id === payload
+      })
+      if (index !== -1) {
+        state.loadedGames.splice(index, 1)
+      }
     }
   },
 
@@ -47,7 +47,8 @@ export default {
               title: obj[key].title,
               slug: obj[key].slug,
               imageUrl: obj[key].imageUrl,
-              iframeUrl: obj[key].iframeUrl
+              iframeUrl: obj[key].iframeUrl,
+              image: obj[key].image
             })
           }
           commit('setLoadedGames', games)
@@ -64,7 +65,8 @@ export default {
         title: payload.title,
         slug: payload.slug,
         imageUrl: payload.imageUrl,
-        iframeUrl: payload.iframeUrl
+        iframeUrl: payload.iframeUrl,
+        image: payload.image
       }
       let key
       firebase.database().ref('games').push(game)
@@ -82,8 +84,26 @@ export default {
           console.log(error)
         })
     },
+    updateGameData ({commit}, payload) {
+      const updateObj = {
+        title: payload.title,
+        slug: payload.slug,
+        // imageUrl: payload.imageUrl,
+        // iframeUrl: payload.iframeUrl,
+        image: payload.image
+      }
+      // updateObj.imageUrl = payload.imageUrl
+      // updateObj.iframeUrl = payload.iframeUrl
+      // updateObj.image = payload.image
+      firebase.database().ref('games').child(payload.id).update(updateObj)
+        .then(() => {
+          commit('updateGameData', payload)
+      })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
     removeGame ({commit}, payload) {
-      // commit('setLoading', true)
       firebase.database().ref('games').child(payload.id).remove()
         // .then(() => {
         //   const imageUrl = payload.imageUrl
@@ -93,37 +113,26 @@ export default {
         // })
         .then(() => {
           commit('removeGame', payload.id)
-          // commit('setLoading', false)
-        })
-        .catch((error) => {
-          console.log(error)
-          // commit('setLoading', false)
-        })
-    },
-    updateGameData ({commit}, payload) {
-      const updateObj = {}
-      updateObj.title = payload.title
-      updateObj.slug = payload.slug
-      // updateObj.imageUrl = payload.imageUrl
-      // updateObj.iframeUrl = payload.iframeUrl
-      firebase.database().ref('games').child(payload.id).update(updateObj)
-        .then(() => {
-          commit('updateGameData', payload)
         })
         .catch((error) => {
           console.log(error)
         })
-    },
+    }
   },
 
   getters: {
     loadedGames (state) {
-      return state.loadedGames
+      return state.loadedGames.reverse()
+    },
+    loadedGamesSortedByDate (state, getters) {
+      return getters.loadedGames.sort((itemA, itemB) => {
+        return new Date(itemA.date) - new Date(itemB.date)
+      }).reverse() || {}
     },
     loadedGame (state) {
-      return (id) => {
+      return (gameId) => {
         return state.loadedGames.find((game) => {
-          return game.id === id
+          return game.id === gameId
         }) || {}
       }
     }
