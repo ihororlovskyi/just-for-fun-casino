@@ -20,6 +20,12 @@
         label="image"
         v-model="game.image"
       />
+      <v-text-field
+        name="iframe"
+        id="iframe"
+        label="iframe"
+        v-model="game.iframe"
+      />
 
     </v-card-text>
     <v-card-actions>
@@ -56,7 +62,8 @@
           slug: this.game.slug,
           // imageUrl: this.imageUrl,
           // iframeUrl: this.iframeUrl,
-          image: this.game.image
+          image: this.game.image,
+          iframe: this.game.iframe
         }
         this.$store.dispatch('updateGameData', gameData)
         this.$router.push('/admin/games')

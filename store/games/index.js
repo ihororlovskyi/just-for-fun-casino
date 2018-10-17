@@ -19,9 +19,10 @@ export default {
       })
       game.title = payload.title
       game.slug = payload.slug
-      game.imageUrl = payload.imageUrl
-      game.iframeUrl = payload.iframeUrl
+      // game.imageUrl = payload.imageUrl
+      // game.iframeUrl = payload.iframeUrl
       game.image = payload.image
+      game.iframe = payload.iframe
     },
     removeGame (state, payload) {
       const index = state.loadedGames.findIndex(game => {
@@ -46,9 +47,10 @@ export default {
               date: obj[key].date,
               title: obj[key].title,
               slug: obj[key].slug,
-              imageUrl: obj[key].imageUrl,
-              iframeUrl: obj[key].iframeUrl,
-              image: obj[key].image
+              // imageUrl: obj[key].imageUrl,
+              // iframeUrl: obj[key].iframeUrl,
+              image: obj[key].image,
+              iframe: obj[key].iframe
             })
           }
           commit('setLoadedGames', games)
@@ -64,9 +66,10 @@ export default {
         date: payload.date.toISOString(),
         title: payload.title,
         slug: payload.slug,
-        imageUrl: payload.imageUrl,
-        iframeUrl: payload.iframeUrl,
-        image: payload.image
+        // imageUrl: payload.imageUrl,
+        // iframeUrl: payload.iframeUrl,
+        image: payload.image,
+        iframe: payload.iframe
       }
       let key
       firebase.database().ref('games').push(game)
@@ -90,7 +93,8 @@ export default {
         slug: payload.slug,
         // imageUrl: payload.imageUrl,
         // iframeUrl: payload.iframeUrl,
-        image: payload.image
+        image: payload.image,
+        iframe: payload.iframe
       }
       // updateObj.imageUrl = payload.imageUrl
       // updateObj.iframeUrl = payload.iframeUrl

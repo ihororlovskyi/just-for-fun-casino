@@ -19,7 +19,7 @@
 
       <div v-else>
         <div v-for="i in games" :key="i.id">
-          <a @click="onLoadGame(i.id)">{{ i.title }}</a>
+          <a @click="onLoadGame(i.id)" v-html="i.title"/>
           <!-- <v-btn small flat icon @click="onEditPage(i.id)" :page="i.id">
             <v-icon small>mdi-pencil</v-icon>
           </v-btn> -->
@@ -38,7 +38,7 @@
     data () {
       return {
         createGameBtn: {
-          title: 'Create New Game',
+          title: 'Add New Game',
           icon: 'mdi-plus',
           url: '/admin/games/create'
         }
@@ -59,6 +59,13 @@
       // onEditPage (id) {
       //   this.$router.push('/admin/games/edit/' + id)
       // }
+    },
+    head: {
+      title: 'Games | Admin',
+      meta: [
+        { name: 'description', content: '' },
+        { property: 'og:image', content: '' }
+      ]
     }
   }
 </script>

@@ -6,13 +6,15 @@
       <edit-game :game="game" v-if="userIsAdmin"/>
       <remove-game :game="game" v-if="userIsAdmin"/>
 
+      <div v-if="game.date">date: {{ game.date }}</div>
       <div v-if="game.title">title: {{ game.title }}</div>
       <div v-if="game.slug">slug: {{ game.slug }}</div>
       <!-- <img v-if="game.imageUrl" :src="game.imageUrl"/> -->
-      <div v-if="game.imageUrl">imageUrl: {{ game.imageUrl }}</div>
+      <!-- <div v-if="game.imageUrl">imageUrl: {{ game.imageUrl }}</div> -->
       <!-- <iframe v-if="game.iframeUrl" :src="game.iframeUrl" style="width:100%;height:500px;border:none;"/> -->
-      <div v-if="game.iframeUrl">iframeUrl: {{ game.iframeUrl }}</div>
-      <div v-if="game.date">date: {{ game.date }}</div>
+      <!-- <div v-if="game.iframeUrl">iframeUrl: {{ game.iframeUrl }}</div> -->
+      <div v-if="game.date">image: {{ game.image }}</div>
+      <div v-if="game.date">iframe: {{ game.iframe }}</div>
 
       <v-tooltip top color="warning" open-delay="0">
         <v-btn

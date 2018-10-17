@@ -2,7 +2,7 @@
   <v-card>
     <form @submit.prevent="onCreateGame">
       <v-card-text>
-        <h1 class="headline">Create New Game</h1>
+        <h1 class="headline">Add New Game</h1>
         <v-text-field
           name="title"
           label="Title"
@@ -20,29 +20,37 @@
           type="text"
           autocomplete="slug"
         />
-        <v-text-field
+        <!-- <v-text-field
           name="imageUrl"
           label="Image Url"
           id="imageUrl"
           v-model="imageUrl"
           type="text"
           autocomplete="imageUrl"
-        />
-        <v-text-field
+        /> -->
+        <!-- <v-text-field
           name="iframeUrl"
           label="Iframe Url"
           id="iframeUrl"
           v-model="iframeUrl"
           type="text"
           autocomplete="iframeUrl"
-        />
+        /> -->
         <v-text-field
           name="image"
-          label="image"
+          label="Image Url"
           id="image"
           v-model="image"
           type="text"
           autocomplete="image"
+        />
+        <v-text-field
+          name="iframe"
+          label="Iframe Url"
+          id="iframe"
+          v-model="iframe"
+          type="text"
+          autocomplete="iframe"
         />
       </v-card-text>
       <v-card-actions>
@@ -55,7 +63,7 @@
           type="submit"
         >
           <v-icon left>mdi-plus</v-icon>
-          Create
+          Add Game
         </v-btn>
       </v-card-actions>
     </form>
@@ -68,14 +76,18 @@
       return {
         title: '',
         slug: '',
-        imageUrl: '',
-        iframeUrl: '',
-        image: ''
+        // imageUrl: '',
+        // iframeUrl: '',
+        image: '',
+        iframe: ''
       }
     },
     computed: {
       formIsValid () {
-        return this.title !== ''
+        return this.title !== '' &&
+        this.slug !== '' &&
+        this.image !== '' &&
+        this.iframe !== ''
       }
     },
     methods: {
@@ -87,9 +99,10 @@
           date: new Date(),
           title: this.title,
           slug: this.slug,
-          imageUrl: this.imageUrl,
-          iframeUrl:  this.iframeUrl,
-          image:  this.image
+          // imageUrl: this.imageUrl,
+          // iframeUrl:  this.iframeUrl,
+          image:  this.image,
+          iframe:  this.iframe
         }
         this.$store.dispatch('createGame', gameData)
         this.$router.push('/admin/games')
