@@ -5,20 +5,6 @@
         <v-navigation-drawer>
           <v-list>
 
-            <!-- <v-list-tile to="/admin" exact>
-              <v-list-tile-action>
-                <v-icon>mdi-view-dashboard</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-title>Dashboard</v-list-tile-title>
-            </v-list-tile>
-
-            <v-list-tile to="/admin/pages">
-              <v-list-tile-action>
-                <v-icon>mdi-book-open-page-variant</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-title>Pages</v-list-tile-title>
-            </v-list-tile> -->
-
             <v-list-tile v-for="i in menu" :key="i.url" :to="i.url" exact>
               <v-list-tile-action>
                 <v-icon>{{ i.icon }}</v-icon>
@@ -52,6 +38,11 @@
           icon: 'mdi-book-open-page-variant',
           url: '/admin/games'
         }]
+      }
+    },
+    computed: {
+      userIsAuthenticated () {
+        return this.$store.getters.userIsAuthenticated
       }
     },
     head: {

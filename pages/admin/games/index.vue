@@ -1,35 +1,34 @@
 <template>
   <v-card>
+    <v-card-title>
+      <h1 class="headline">Games</h1>
+    </v-card-title>
     <v-card-text>
-      <!-- <v-flex> -->
-        <h1 class="headline">Games</h1>
-        <!-- <v-spacer/> -->
-        <v-btn color="success" class="ml-0" :to="createGameBtn.url">
-          <v-icon left>{{ createGameBtn.icon }}</v-icon>
-          {{ createGameBtn.title }}
-        </v-btn>
-      <!-- </v-flex> -->
+      <div v-if="userIsAdmin">
 
-      <v-progress-circular
-        v-if="loading"
-        indeterminate
-        :size="40"
-        color="amber"
-      />
-
-      <div v-else>
-        <div v-for="i in games" :key="i.id">
-          <a @click="onLoadGame(i.id)" v-html="i.title"/>
-          <!-- <v-btn small flat icon @click="onEditPage(i.id)" :page="i.id">
-            <v-icon small>mdi-pencil</v-icon>
-          </v-btn> -->
-          <!-- <v-icon small>mdi-delete</v-icon> -->
+        <div class="mb-5">
+          <v-btn color="success" :to="createGameBtn.url">
+            <v-icon left>{{ createGameBtn.icon }}</v-icon>
+            {{ createGameBtn.title }}
+          </v-btn>
         </div>
+
+        <v-progress-circular
+          v-if="loading"
+          indeterminate
+          :size="40"
+          color="amber"
+        />
+
+        <div v-else>
+          <div v-for="i in games" :key="i.id">
+            <a @click="onLoadGame(i.id)" v-html="i.title"/>
+          </div>
+        </div>
+
       </div>
 
     </v-card-text>
-    <!-- <v-card-actions>
-    </v-card-actions> -->
   </v-card>
 </template>
 
@@ -50,6 +49,9 @@
       },
       games () {
         return this.$store.getters.loadedGamesSortedByDate
+      },
+      userIsAdmin () {
+        return this.$store.getters.userIsAdmin
       }
     },
     methods: {

@@ -27,14 +27,14 @@
         v-if="!userIsAuthenticated"
       />
 
-      <v-btn
+      <!-- <v-btn
         flat
         round
         class="success"
         :to="btnCashbox.url"
         v-html="btnCashbox.name"
         v-if="userIsAuthenticated"
-      />
+      /> -->
 
       <v-btn
         flat
@@ -73,10 +73,10 @@
           name: 'Login',
           url: '/user/login'
         },
-        btnCashbox: {
-          name: 'Cashbox',
-          url: '/cashbox'
-        },
+        // btnCashbox: {
+        //   name: 'Cashbox',
+        //   url: '/cashbox'
+        // },
         btnProfile: {
           name: 'Profile',
           url: '/user/profile'
@@ -90,7 +90,7 @@
           icon: 'mdi-security',
           url: '/admin'
         },
-        copyright: '2018 © LotoFun Free to play Casino'
+        copyright: '2018 © Just For Fun Casino'
       }
     },
     computed: {

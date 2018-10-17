@@ -28,11 +28,11 @@
           <span class="ml-2 hidden-sm-and-down">{{ adminBtn.title }}</span>
         </v-btn>
 
-        <!-- <v-btn flat v-if="userIsAuthenticated" :to="profileBtn.url">
+        <v-btn flat v-if="userIsAuthenticated" :to="profileBtn.url">
           <v-icon>{{ profileBtn.icon }}</v-icon>
           <span class="ml-2 hidden-sm-and-down">{{ profileBtn.title }}</span>
-        </v-btn> -->
-        
+        </v-btn>
+
       </v-toolbar-items>
 
       <v-spacer class="hidden-sm-and-up"/>
@@ -84,14 +84,14 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <!-- <v-list-tile :to="profileBtn.url">
+        <v-list-tile :to="profileBtn.url">
           <v-list-tile-action>
             <v-icon>{{ profileBtn.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>{{ profileBtn.title }}</v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile> -->
+        </v-list-tile>
 
       </v-list>
     </v-navigation-drawer>
@@ -104,11 +104,31 @@
     data () {
       return {
         sideNav: null,
-        siteBtn: {title: 'Site', icon: 'mdi-earth', url: '/'},
-        signInBtn: {title: 'Sign In', icon: 'mdi-key', url: '/user/register'},
-        signUpBtn: {title: 'Sign Up', icon: 'mdi-account-plus', url: '/user/login'},
-        // profileBtn: {title: 'Profile', icon: 'mdi-account', url: '/user/profile'},
-        adminBtn: {title: 'Админ', icon: 'mdi-security', url: '/admin'}
+        siteBtn: {
+          title: 'Site',
+          icon: 'mdi-earth',
+          url: '/'
+        },
+        signInBtn: {
+          title: 'Sign In',
+          icon: 'mdi-key',
+          url: '/admin/user/login'
+        },
+        signUpBtn: {
+          title: 'Sign Up',
+          icon: 'mdi-account-plus',
+          url: '/admin/user/register'
+        },
+        profileBtn: {
+          title: 'Profile',
+          icon: 'mdi-account',
+          url: '/admin/user/profile'
+        },
+        adminBtn: {
+          title: 'Admin',
+          icon: 'mdi-security',
+          url: '/admin'
+        }
       }
     },
     computed: {
