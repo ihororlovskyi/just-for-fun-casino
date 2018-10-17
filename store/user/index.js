@@ -6,7 +6,7 @@ export default {
     user: null,
     admins: [
       'lX1CdmZNCsOMNAxTmeBjxbNDmeE2',
-      'lX1CdmZNCsOMNAxTmeBjxbNDmeE3'
+      'LVEiqHxayAcsfqyDLquv9FRjOwh2'
     ]
   },
 
