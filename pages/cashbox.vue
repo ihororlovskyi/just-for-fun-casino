@@ -54,6 +54,7 @@
 
       </v-card>
 
+      <cashbox-methods/>
       <cashbox-history/>
 
     </v-flex>
@@ -61,10 +62,12 @@
 </template>
 
 <script>
+  import CashboxMethods from '~/components/CashboxMethods'
   import CashboxHistory from '~/components/CashboxHistory'
 
   export default {
     components: {
+      CashboxMethods,
       CashboxHistory
     },
     data () {
