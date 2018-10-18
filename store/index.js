@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 
 import games from './games'
 import user from './user'
+import ballance from './ballance'
 import loading from './loading'
 import error from './error'
 
@@ -13,6 +14,7 @@ const createStore = () => {
     modules: {
       games: games,
       user: user,
+      ballance: ballance,
       loading: loading,
       error: error
     }

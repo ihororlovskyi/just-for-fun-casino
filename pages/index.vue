@@ -36,7 +36,7 @@
     head: {
       title: 'Home',
       meta: [
-        { name: 'description', content: 'Home of Just For Fun Casino' },
+        { name: 'description', content: '' },
         { property: 'og:image', content: '' }
       ]
     }

@@ -3,7 +3,7 @@ import firebase, {auth} from '@/services/fireinit.js'
 export default {
 
   state: {
-    user: null,
+    user: {},
     admins: [
       'lX1CdmZNCsOMNAxTmeBjxbNDmeE2',
       'LVEiqHxayAcsfqyDLquv9FRjOwh2'
@@ -70,7 +70,7 @@ export default {
     },
     logOut ({commit}) {
       firebase.auth().signOut()
-      commit('setUser', null)
+      commit('setUser', {})
     }
   },
 

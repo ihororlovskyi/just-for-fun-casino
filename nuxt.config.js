@@ -1,6 +1,6 @@
 module.exports = {
   head: {
-    titleTemplate: '%s | Just For Fun Casino',
+    titleTemplate: '%s | Chempion Slots',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -10,7 +10,7 @@ module.exports = {
       { rel: 'shortcut icon', href: '/img/icons/favicon-32.png' },
       { rel: 'apple-touch-icon', href: '/img/icons/favicon-144.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css' }
     ]
   },

@@ -126,7 +126,8 @@ export default {
 
   getters: {
     loadedGames (state) {
-      return state.loadedGames.reverse()
+      // return state.loadedGames.reverse()
+      return state.loadedGames
     },
     loadedGamesSortedByDate (state, getters) {
       return getters.loadedGames.sort((itemA, itemB) => {

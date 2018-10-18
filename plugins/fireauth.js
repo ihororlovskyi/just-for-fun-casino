@@ -7,7 +7,11 @@ export default (context) => {
   return new Promise((resolve, reject) => {
     auth.onAuthStateChanged(user => {
       store.commit('setUser', user)
-      resolve()
+      if (user) {
+        store.dispatch('loadTransactions')
+      }
+    resolve()
     })
   })
+
 }
