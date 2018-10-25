@@ -10,7 +10,7 @@ export default (context) => {
       if (user) {
         store.dispatch('loadTransactions')
       }
-    resolve()
+      resolve()
     })
   })
 
