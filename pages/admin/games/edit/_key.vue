@@ -60,8 +60,6 @@
           id: this.game.id,
           title: this.game.title,
           slug: this.game.slug,
-          // imageUrl: this.imageUrl,
-          // iframeUrl: this.iframeUrl,
           image: this.game.image,
           iframe: this.game.iframe
         }
